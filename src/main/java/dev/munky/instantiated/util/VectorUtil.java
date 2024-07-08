@@ -19,6 +19,9 @@ public class VectorUtil {
     public static Vector3 toVector3(Location location){
         return Vector3.at(location.getX(), location.getY(), location.getZ());
     }
+    public static BlockVector3 toBlockVector(Vector vector){
+        return BlockVector3.at(vector.getX(), vector.getY(), vector.getZ());
+    }
     public static BlockVector3 toBlockVector(BlockVector3 vector){
         return BlockVector3.at(vector.getX(), vector.getY(), vector.getZ());
     }

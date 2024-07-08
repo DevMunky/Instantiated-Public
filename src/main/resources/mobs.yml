@@ -1,0 +1,48 @@
+mobs:
+  identifier:
+    entity-type: "zombie"
+    equipment:
+      head:
+        item: "netherite_helmet"
+        enchantments:
+          durability: 3
+      chestplate:
+        item: "leather_chestplate"
+        enchantments:
+          thorns: 3
+      leggings:
+        item: "leather_leggings"
+      boots:
+        item: "diamond_boots"
+      hand:
+        item: "stick"
+      offhand:
+        item: "blue_wool"
+    effects:
+      strength:
+        amplifier: 5
+        time_in_seconds: 60
+      water_breathing:
+        amplifier: 1
+        # no time field is interpreted as infinite duration
+    attributes:
+      max_health: 55d
+      follow_range: 16d
+      knockback_resistance: 0.5d
+      movement_speed: 0.23d
+      attack_damage: 2.5d
+      armor: 0d
+      armor_toughness: 2.0d
+      attack_knockback: 1.5d
+      flying_speed: 0.6d
+      horse:
+        jump_strength: 0.7d
+    properties:
+      invulnerable: false
+      is_baby: true
+      should_burn_in_day: false
+      silent: true
+      glowing:
+        enabled: true
+        color: "GREEN"
+      invisible: false

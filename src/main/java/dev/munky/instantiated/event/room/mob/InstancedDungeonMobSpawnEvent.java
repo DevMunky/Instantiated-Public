@@ -1,12 +1,14 @@
 package dev.munky.instantiated.event.room.mob;
 
+import dev.munky.instantiated.dungeon.InstancedDungeonRoom;
 import dev.munky.instantiated.event.room.InstancedDungeonRoomEvent;
-import dev.munky.instantiated.dungeon.room.InstancedDungeonRoom;
-import dev.munky.instantiated.dungeon.room.mob.DungeonMob;
+import dev.munky.instantiated.dungeon.mob.DungeonMob;
 import org.bukkit.Location;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Optional;
 
 public class InstancedDungeonMobSpawnEvent extends InstancedDungeonRoomEvent {
     public static HandlerList handlers = new HandlerList();
@@ -34,9 +36,9 @@ public class InstancedDungeonMobSpawnEvent extends InstancedDungeonRoomEvent {
         return this.dungeonMob;
     }
     public void setLivingEntity(LivingEntity entity){
-        getDungeonMob().setLivingEntity(entity);
+        getDungeonMob().setLivingEntity(Optional.ofNullable(entity));
     }
     public LivingEntity getLivingEntity(){
-        return getDungeonMob().getLivingEntity();
+        return getDungeonMob().getLivingEntity().orElse(null);
     }
 }

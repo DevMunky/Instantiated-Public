@@ -3,10 +3,9 @@ package dev.munky.instantiated.config;
 import dev.munky.instantiated.Instantiated;
 import dev.munky.instantiated.event.ListenerFactory;
 import dev.munky.instantiated.event.room.mob.InstancedDungeonMobSpawnEvent;
-import io.lumine.mythic.api.adapters.AbstractLocation;
-import io.lumine.mythic.api.adapters.AbstractWorld;
+import dev.munky.instantiated.exception.DungeonExceptions;
+import dev.munky.instantiated.util.Util;
 import io.lumine.mythic.api.mobs.MythicMob;
-import io.lumine.mythic.bukkit.BukkitAPIHelper;
 import io.lumine.mythic.bukkit.MythicBukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.LivingEntity;
@@ -41,18 +40,17 @@ public class MythicMobsSupportHandler extends InstantiatedConfiguration {
         }
 
         EVENT_LISTENER = ListenerFactory.registerEvent(InstancedDungeonMobSpawnEvent.class,(e)->{
-            String identifier = e.getDungeonMob().getMobIdentifier();
+            String identifier = e.getDungeonMob().getIdentifier().getId();
             String mythicIdentifier = MOBS.get(identifier);
             if (mythicIdentifier!=null){
                 try{
                     MythicMob mythicMob = MythicBukkit.inst().getAPIHelper().getMythicMob(mythicIdentifier);
-                    if (mythicMob!=null){
-                        LivingEntity livingEntity = (LivingEntity) MythicBukkit.inst().getAPIHelper().spawnMythicMob(mythicMob,e.getSpawnLocation(),1);
-                        e.setLivingEntity(livingEntity);
-                        e.getDungeonMob().getCustom().put("mythic-identifier",mythicIdentifier);
-                    }
+                    if (mythicMob==null) throw DungeonExceptions.getGeneric().consume("Mythic mob '" + mythicIdentifier + "' no longer exists, reload instantiated after configuring mythic mobs");
+                    LivingEntity livingEntity = (LivingEntity) MythicBukkit.inst().getAPIHelper().spawnMythicMob(mythicMob, e.getSpawnLocation(), 1);
+                    e.setLivingEntity(livingEntity);
+                    e.getDungeonMob().getCustom().put("mythic-identifier",mythicIdentifier);
                 }catch (Exception ex){
-                    Instantiated.logger().warning("Error while spawning mythic mob:\n" + ex.getMessage());
+                    Instantiated.logger().warning("Error while spawning mob '"+ identifier + "': " + Util.stackMessage(ex));
                 }
             }
         });

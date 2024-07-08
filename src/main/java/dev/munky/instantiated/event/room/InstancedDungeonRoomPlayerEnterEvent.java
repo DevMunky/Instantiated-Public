@@ -1,6 +1,6 @@
 package dev.munky.instantiated.event.room;
 
-import dev.munky.instantiated.dungeon.room.InstancedDungeonRoom;
+import dev.munky.instantiated.dungeon.InstancedDungeonRoom;
 import org.bukkit.entity.Player;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;

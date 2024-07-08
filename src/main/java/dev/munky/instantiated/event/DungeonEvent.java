@@ -1,13 +1,14 @@
 package dev.munky.instantiated.event;
 
-import dev.munky.instantiated.dungeon.Dungeon;
+import dev.munky.instantiated.dungeon.DungeonFormat;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 
 public abstract class DungeonEvent extends Event implements Cancellable {
-    private final Dungeon dungeon;
+    private final DungeonFormat dungeon;
     private boolean cancelled = false;
-    public DungeonEvent(Dungeon dungeon) {
+    public DungeonEvent(DungeonFormat dungeon, boolean async) {
+        super(async);
         this.dungeon = dungeon;
     }
     @Override
@@ -18,7 +19,7 @@ public abstract class DungeonEvent extends Event implements Cancellable {
     public void setCancelled(boolean cancel) {
         this.cancelled = cancel;
     }
-    public Dungeon getDungeon(){
+    public DungeonFormat getDungeon(){
         return this.dungeon;
     }
 }

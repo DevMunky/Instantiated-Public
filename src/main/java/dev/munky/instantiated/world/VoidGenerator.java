@@ -65,6 +65,5 @@ public class VoidGenerator extends ChunkGenerator {
         public @NotNull Biome getBiome(@NotNull WorldInfo worldInfo, int x, int y, int z) {return Biome.THE_END;}
         @Override
         public @NotNull List<Biome> getBiomes(@NotNull WorldInfo worldInfo) {return List.of(Biome.THE_END);}
-        // TODO Add some values from here to config
     }
 }

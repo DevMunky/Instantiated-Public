@@ -1,13 +1,13 @@
 package dev.munky.instantiated.util;
 
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import dev.munky.instantiated.data.json.JsonSerializable;
+import com.sk89q.worldedit.math.BlockVector3;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.util.Vector;
+import org.jetbrains.annotations.NotNull;
 
-public class ImmutableLocation implements JsonSerializable {
+public class ImmutableLocation {
     final World world;
     final double x;
     final double y;
@@ -58,6 +58,9 @@ public class ImmutableLocation implements JsonSerializable {
     public ImmutableVector toImmutableVector(){
         return new ImmutableVector(x,y,z);
     }
+    public BlockVector3 toBlockVector3(){
+        return BlockVector3.at(x,y,z);
+    }
     public String toString(){
         return "ImmutableLocation["+world+","+x+","+y+","+z+","+yaw+","+pitch+"]";
     }
@@ -66,16 +69,5 @@ public class ImmutableLocation implements JsonSerializable {
     }
     public int hashCode(){
         return world.hashCode() + (int) x + (int) y + (int) z + (int) yaw + (int) pitch;
-    }
-    @Override
-    public JsonElement serialize() {
-        JsonObject object = new JsonObject();
-        object.addProperty("world",world.getName());
-        object.addProperty("x",x);
-        object.addProperty("y",y);
-        object.addProperty("z",z);
-        object.addProperty("yaw",yaw);
-        object.addProperty("pitch",pitch);
-        return object;
     }
 }

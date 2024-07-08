@@ -18,7 +18,7 @@ public class InstancedDungeonStartEvent extends InstancedDungeonEvent {
     private final Location location;
     private final Player[] players;
     public InstancedDungeonStartEvent(InstancedDungeon instance, Location schematicOrigin, Player[] players) {
-        super(instance);
+        super(instance, false);
         this.players = players;
         this.location = schematicOrigin;
     }

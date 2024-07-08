@@ -3,12 +3,11 @@ package dev.munky.instantiated.util;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.sk89q.worldedit.math.BlockVector3;
-import dev.munky.instantiated.data.json.JsonSerializable;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.util.Vector;
 
-public class ImmutableVector implements JsonSerializable {
+public class ImmutableVector  {
     final double x;
     final double y;
     final double z;
@@ -48,13 +47,5 @@ public class ImmutableVector implements JsonSerializable {
     }
     public static ImmutableVector of(BlockVector3 vector){
         return new ImmutableVector(vector.getX(), vector.getY(), vector.getZ());
-    }
-    @Override
-    public JsonElement serialize() {
-        JsonObject object = new JsonObject();
-        object.addProperty("x",x);
-        object.addProperty("y",y);
-        object.addProperty("z",z);
-        return object;
     }
 }

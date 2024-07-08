@@ -1,0 +1,13 @@
+debug:
+  enabled: true
+dungeon:
+  world: "instancing"
+  data-storage:
+    mode: "LOCAL_JSON"
+  edit-mode:
+    line-resolution: 20
+    particle-refresh-rate: 6
+  keys:
+    dropped-keys-glow:
+      enabled: true
+      color: "BLUE"
