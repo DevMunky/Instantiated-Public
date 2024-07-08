@@ -46,11 +46,11 @@ All edits with these tools are done in real time. That means you will see change
 
     > Configuring different components
     >> Configure a door by clicking on it.
-
+    >
     >> Configure a mob by clicking anywhere *except on a door* while standing near the spawn point.
-
+    >
     >> Configure a room by clicking anywhere *except on a door and while not standing near a mob*.
-
+    >
     >> Configure a dungeon by shift clicking anywhere *except on a door and while not standing near a mob*.
 
     Use the cursor to click on an option, which is a line typically prefixed with `->`  and below a category colored in `aqua`
