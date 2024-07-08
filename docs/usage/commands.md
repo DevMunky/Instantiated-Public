@@ -26,9 +26,7 @@ Any branches without a description implies that there are more arguments needed 
     - multiple player argument `players`
 
             forces the given players to leave their current dungeon, if in one
-  - literal argument `edit`
-
-    Edit mode is explained more in depth [here](../usage/editmode.md)
+  - literal argument `edit` (Edit mode is explained more in depth [here](../usage/editmode.md))
 
         puts the sender into edit mode. This means seeing room and door boundaries, as well as mob spawn locations. Your inventory is also swapped out for the dedicated edit tools.
     - dungeon argument `dungeon`
