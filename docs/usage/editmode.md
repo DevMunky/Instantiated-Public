@@ -11,7 +11,7 @@ All edits with these tools are done in real time. That means you will see change
 ### Edit mode puts four items in your inventory
 ![inventory](../assets/usage/editmode/fullinv.png)
 
-    When items are put in your inventory with edit mode, your previous inventory is saved. When you exit edit mode, your previous inventory is replaced.
+> When items are put in your inventory with edit mode, your previous inventory is saved. When you exit edit mode, your previous inventory is replaced.
 
 ### These four items are *(from left to right)*
 
@@ -59,4 +59,5 @@ All edits with these tools are done in real time. That means you will see change
 
 ## Cancelling chat inputs
 
-    Cancel any chat input, that was asked as a result of an edit tool, by responding with "cancel" or "n". Any components manually named these two words through dungeons.json may have undefined behavior. It is also possible that these words be defined as invalid ids.
+Cancel any chat input, that was asked as a result of an edit tool, by responding with `cancel` or `n`.
+> Any components manually named these two words through dungeons.json may have undefined behavior. It is also possible that these words be defined as invalid ids in the future.
