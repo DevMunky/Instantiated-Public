@@ -7,23 +7,23 @@ All commands have syntax highlighting and error handling
 
 Any branches without a description implies that there are more arguments needed before executing the command
 
-- Command root `dungeons`, `inst`, or `instantiated`
-  - literal argument `reload`
+- ### Command root `dungeons`, `inst`, or `instantiated`
+  - ### literal argument `reload`
         
     > Reloads the plugin data and configuration straight from file, without saving!
   
-  - literal argument `save`
+  - ### literal argument `save`
   
     > Saves plugin data (does not affect configuration) as is
   
-  - literal argument `start`
+  - ### literal argument `start`
     - multiple player argument `players`
       - dungeon argument `dungeon`
         - boolean argument `force-create`
               
           > Starts a dungeon containing all of the given players
   
-  - literal argument `leave`
+  - ### literal argument `leave`
 
     > forces the sender of the command to leave the current dungeon, if in one
     
@@ -31,7 +31,7 @@ Any branches without a description implies that there are more arguments needed 
 
       > forces the given players to leave their current dungeon, if in one
   
-  - literal argument `edit`
+  - ### literal argument `edit`
 
     > puts the sender into [edit mode](../usage/editmode.md). This means seeing room and door boundaries, as well as mob spawn locations. Your inventory is also swapped out for the dedicated edit tools.
     

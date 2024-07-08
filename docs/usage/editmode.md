@@ -6,7 +6,7 @@ Any edit mode functions on the premise that the closest room to you, is the sele
 
 #### Therefore, from here on out, the closest room will be referred to as the *selected room*.
 
-All edits with these tools are done in real time. That means you will see changes immediately, yet those changes will only persist once [saved](../usage/commands.md). There may be cases where an edit requires all instances of a given dungeon to be reloaded, including cached instances. This happens automatically.
+All edits with these tools are done in real time. That means you will see changes immediately, yet those changes will only persist once [saved](../usage/commands.md#literal-argument-save). There may be cases where an edit requires all instances of a given dungeon to be reloaded, including cached instances. This happens automatically.
 
 ### Edit mode puts four items in your inventory
 ![inventory](../assets/usage/editmode/fullinv.png)
