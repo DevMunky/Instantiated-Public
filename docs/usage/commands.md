@@ -33,7 +33,7 @@ Any branches without a description implies that there are more arguments needed 
   
   - ### literal argument `edit`
 
-    > puts the sender into [edit mode](../usage/editmode.md). This means seeing room and door boundaries, as well as mob spawn locations. Your inventory is also swapped out for the dedicated edit tools.
+    > puts the sender into [edit mode](../usage/editmode.md#the-edit-mode). This means seeing room and door boundaries, as well as mob spawn locations. Your inventory is also swapped out for the dedicated edit tools.
     
     - dungeon argument `dungeon`
       - literal argument `static` *(only exists to make adding more dungeon types easier)*
@@ -50,7 +50,7 @@ Any branches without a description implies that there are more arguments needed 
         - literal argument `add-room`
           - text argument `room-id`
 
-            > adds a blank room with 5 length, 5 width, and 5 height. Further configuration can be done in dungeons.json or with the [ingame edit tool](../usage/editmode.md)
+            > adds a blank room with 5 length, 5 width, and 5 height. Further configuration can be done in dungeons.json or with the [ingame edit tool](../usage/editmode.md#the-edit-mode)
         
         - literal argument `remove-room`
           - text argument `room-id`
