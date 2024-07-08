@@ -27,6 +27,32 @@ Instantiated boasts many features, but of course not everything can be done. If 
     
     I like to think that Instantiated has quite nice error handling, making use of StackFrames to deduce the cause of nearly any error. This includes data syntax in the dungeons.json. So don't worry about changing things in there as long as you are ready to read the error and fix it!
 
+## TODO (what i want to add)
+
+* Procedural dungeons
+    > Already some backend set up for this, the main issue is actually generating the rooms.
+    > Stuff like where rooms connect to each other, how to handle different floors, etc.
+
+* An editor built into the jar, as an actual application
+    > Can be easier to actually change things, because there can be actual text boxes
+    > and things of that nature. I just dont know if its something people would be interested in
+
+* SQL support, if there is interest (and reason)
+
+* Multi world / server modes
+    > Modes to support multi-world setups, like giving each dungeon its own world for instancing, or each dungeon having its own server. Will look further into these options if interest permits.
+
+* Really, really good documentation (and API)
+    > Its only a matter of time to get remarkable documentation. If I could get just one dedicated person to build up the foundation of the documentation, never again would I have to worry about something not being documented.
+    
+    > This also means I want good javadocs, which can be hard.
+
+* Better in-house mob support
+    > Mythic support as is, is not terrible. But without Mythic Mobs, the support is abyssmal. I want to really make Instantiated a plugin capable of handling its own "custom" mobs.
+
+* ### And much more i cannot think of!
+    > Please add more things to this list by making a post in `#suggestions` in the [discord](https://discord.gg/XggaTq7kjR)
+
 ## Showcase
 ![showcase](./assets/image1.png)
 
