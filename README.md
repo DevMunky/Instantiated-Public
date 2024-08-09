@@ -9,7 +9,8 @@ Mythic mobs is supported, with the mythic-mobs.yml config file. Just add the dun
 ## Dependencies
 
 1. Paper
-    > Needed for their library loading at runtime for compatibility with other plugins that may make use of Kotlin in Minecraft plugin development.
+    > Needed for their library loading at runtime for compatibility with other plugins that may make use of the Kotlin Runtime in Minecraft plugin development.
+    > Various Server Optimization
 
 2. FastAsynchronousWorldEdit
     > Needed for fast, efficient, and reliable block changes. Think of all the block changes!
@@ -19,11 +20,11 @@ Instantiated boasts many features, but of course not everything can be done. If 
 
 1. Edit mode
         
-    >With edit mode, you can customize nearly every facet of a dungeon, while the server is running. Now, some things cannot be done for performance or reliability reasons. In these sparse cases, changes must be done through the dungeons.json file.
+    > With edit mode, you can customize nearly every facet of a dungeon, while the server is running. Now, some things cannot be done for performance or reliability reasons. In these sparse cases, changes must be done through the dungeons.json file.
 
 2. Supreme error handling
     
-    >I like to think that Instantiated has quite nice error handling, making use of StackFrames to deduce the cause of nearly any error. This includes data syntax in the dungeons.json. So don't worry about changing things in there as long as you are ready to read the error and fix it!
+    > I like to think that Instantiated has quite nice error handling, making use of StackFrames to deduce the cause of nearly any error. This includes data syntax in the dungeons.json. So don't worry about changing things in there as long as you are ready to read the error and fix it!
 
 ## TODO (what i want to add)
 
@@ -31,9 +32,10 @@ Instantiated boasts many features, but of course not everything can be done. If 
     > Already some backend set up for this, the main issue is actually generating the rooms.
     > Stuff like where rooms connect to each other, how to handle different floors, etc.
 
-* An editor built into the jar, as an actual application
-    > Can be easier to actually change things, because there can be actual text boxes
-    > and things of that nature. I just dont know if its something people would be interested in
+* A client mod to replace the server-side editing
+    > There is a start made for this, but it is quite the endeavor
+    > This will really make configuring dungeons super seamless and FAST
+    > Think like axiom 🤤
 
 * SQL support, if there is interest (and reason)
 
@@ -64,3 +66,4 @@ Support is provided in the [discord](https://discord.gg/XggaTq7kjR), specificall
 ## Credits
 ##### Created and maintained by DevMunky
 ##### Thanks for the help Faceguy
+##### Thank you ACraftingFish
